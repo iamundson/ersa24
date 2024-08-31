@@ -1,16 +1,24 @@
 \subsection{Overview}
-Compositional Reasoning
 
-AGREE Spec language?
+% Overview
+
+AGREE provides a formal contract language for specifying \textit{assumptions} (i.e., expectations on a component's input and the environment) and \textit{guarantees} (i.e., bounds on a component's behavior). AGREE uses a k-induction model checker to prove properties about one layer of an architecture using properties allocated to subcomponents. 
+
+
+
+%AGREE Spec language?
 
 AGREE Counterexamples
 
-AADL Simulator
 
-\subsection{Making Counterexamples Actionable}
 
-Amer: Describe AgreeDog here
 
-\subsection{Preliminary Results}
 
-Amer: Describe results on toy integer example here
+Component interfaces– The output guarantees of each component must be strong enough to satisfy the input assumptions of downstream components. 
+
+Correctness of implementations– The input assumptions of a system along with the output guarantees of its sub-components must be strong enough to satisfy its output guarantees.
+
+
+
+\input{AgreeDog}
+

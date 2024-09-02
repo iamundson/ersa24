@@ -5,5 +5,13 @@ AGREE provides a formal contract language for specifying \textit{assumptions} (i
 
 When a contract violation is found, that is, when an assumption is determined to be invalid or a guarantee is unsupported, AGREE produces a counterexample consisting of values for each system variable at each execution step.  An example counterexample is depicted in Figure~\ref{fig:cex}.  Currently, OSATE includes the AADL Simulator tool, which can accept an AGREE counterexample as input and walk through the trace in the graphical editor, but it is of limited help when it comes to pointing to the actual root cause. 
 
+
+\begin{figure}[h] 
+	\centering 
+	\includegraphics[width=\columnwidth]{figs/cex.jpg}
+	\caption{AGREE counterexample.}
+	\label{fig:cex} 
+\end{figure}
+
 \input{AgreeDog}
 

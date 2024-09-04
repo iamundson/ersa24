@@ -39,7 +39,7 @@ However, a significant challenge encountered was that these explanations and sug
 
 \subsubsection{Requirements for Counterexample Explanations}
 
-To mitigate this issue, we configured AGREE-Dog to generate solutions that conform to a predefined set of system requirements written in natural language, which are uploaded via an Excel sheet or CSV file or directly included in the context. 
+To mitigate the Model Repair Problem, we configured AGREE-Dog to generate solutions that conform to a predefined set of system requirements written in natural language, which are uploaded via an Excel sheet or CSV file or directly included in the context. 
 
 \begin{figure}[t]  
     \centering
@@ -56,9 +56,11 @@ As a result, AGREE-Dog was able to more accurately identify the root cause and s
 This refinement significantly enhanced the accuracy of AGREE-Dog’s recommendations.
 
 
-\subsection{Conversational Quality Assessment Problem}
+\subsection{Preliminary Results and Conversational Quality Assessment Problem}
  
-Our initial evaluations were conducted manually, focusing on AGREE-Dog's ability to accurately identify the cause of counter-examples, repair the model, and ensure compliance with the uploaded requirements. These manual evaluations, applied to two small-scale case studies, highlighted the need for greater automation. Consequently, we are developing a more automated evaluation system to enable testing on more realistic and complex use cases, that autoamte the evaluation workfollow as shown in Figure ~\ref{fig:CQAS}.
+Our initial evaluations were conducted manually, focusing on AGREE-Dog's ability to accurately identify the cause of counter-examples, repair the model, and ensure compliance with the uploaded requirements. The system was evaluated on two case studies. The first case study involved a toy model, \texttt{Integer\_Toy.aadl}, while the second dealt with a larger model that imports several files, totaling 7 files and approximately \texttt{xx} lines of code. AGREE-Dog successfully identified the root cause of all counter-examples for the specified guarantees (13 out of 13) on the first attempt, demonstrating a high degree of accuracy.
+
+However, these manual evaluations, highlighted the need for greater automation. Consequently, we are developing a more automated evaluation system to enable testing on more realistic and complex use cases, that autoamte the evaluation workfollow as shown in Figure ~\ref{fig:CQAS}.
  
 
 \begin{figure}[htbp]
@@ -92,8 +94,8 @@ Our initial evaluations were conducted manually, focusing on AGREE-Dog's ability
 \caption{AGREE-Dog Conversation Quality Assessment System (CQAS) workflow.}
 \label{fig:CQAS}
 \end{figure}
-%\subsection{Limitations and Work Inprogress} 
-We are in the process of selecting a golden set of examples from a formally verified library we developed previously, and constructing a testing set by introducing deliberate violations. These examples are uploaded to the AGREE-Dog system to evaluate its ability to correctly identify the root causes. While AGREE-Dog has demonstrated initial success in this area, model repair evaluation remains a more complex challenge. This is because repairing models can result in multiple solutions, particularly for more intricate use cases. One of the key limitations is the system's ability to consistently remove counter-examples while ensuring compliance with the specified requirements. To address these issues, we are developing a toolset aimed at measuring the system’s convergence towards the correct semantics of the golden examples, within a few-shot learning context. This remains an ongoing challenge, but we are working to extend our prior research from the \cite{coqDog} paper to improve AGREE-Dog's performance in these areas
+
+We are in the process of selecting a golden set of examples from a formally verified library we developed previously, and constructing a testing set by introducing deliberate violations. These examples are uploaded to the AGREE-Dog system to evaluate its ability to correctly identify the root causes. While AGREE-Dog has demonstrated initial success in this area, model repair evaluation remains a more complex challenge. This is because repairing models can result in multiple solutions, particularly for more intricate use cases. One of the key limitations is the system's ability to consistently remove counter-examples while ensuring compliance with the specified requirements. To address these issues, we are developing a toolset aimed at measuring the system’s convergence towards the correct semantics of the golden examples, within a few-shot learning context. This remains an ongoing challenge that we are working to address in our future work. %extend our prior research from the \cite{coqDog} paper to improve AGREE-Dog's performance in these areas
 
 
-\subsection{Preliminary Results}
+%\subsection{Preliminary Results}

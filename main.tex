@@ -10,6 +10,65 @@
 
 % To make text hidden for review visible: \newcommand{\review}[2]{#1}
 \newcommand{\review}[2]{#1}
+% add a figure
+\usepackage{xcolor,colortbl}
+\usepackage{mathpartir}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{subcaption}   % used for figures in experimental evaluation
+\tikzstyle{block} = [rectangle, draw, fill=yellow!30, text width=6em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{block2} = [rectangle, draw, fill=green!30, text width=8em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{block3} = [rectangle, draw, fill=purple!30, text width=8em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{block4} = [rectangle, draw, fill=cyan!30, text width=6em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\usetikzlibrary{arrows,arrows.meta,calc,positioning,backgrounds,fit,shapes,shadows,trees}
+
+\tikzset{%
+  thick arrow/.style={
+     -{Triangle[angle=120:1pt 1]},
+     line width=1.5cm, 
+     draw=teal!70
+  },
+  arrow label/.style={
+    text=white,
+    font=\sffamily\fontsize{12}{12}\selectfont,
+    align=center,
+    yshift=-1.25cm
+  },
+  set mark/.style={
+    insert path={
+      node [midway, arrow label, node contents=#1]
+    }
+  }
+}
+
+\tikzset{
+  basic/.style  = {draw,rectangle,font=\sffamily\fontsize{12}{12}\selectfont}, %text width=2cm, drop shadow},
+  root/.style   = {basic, font=\sffamily\fontsize{12}{12}\selectfont, rounded corners=2pt, thin, align=center,
+                   fill=orange!30},
+  level 0/.style = {basic, font=\sffamily\fontsize{12}{12}\selectfont, thin, align=center, fill=blue!10},
+  level 1/.style = {basic, trapezium, trapezium left angle=70, trapezium right angle=110, font=\sffamily\fontsize{12}{12}\selectfont, thin, align=center, fill=green!20},
+  level 2/.style = {basic, font=\sffamily\fontsize{12}{12}\selectfont, rounded corners=2pt, thin, align=left,
+    fill=yellow!30},
+  level 3/.style = {basic, font=\sffamily\fontsize{12}{12}\selectfont, rounded corners=2pt, thin, align=left,
+    fill=blue!20, text width=12em},
+  level 4/.style = {basic, font=\sffamily\fontsize{12}{12}\selectfont, thin, align=center, 
+    fill=green!30},
+  level 5/.style = {basic, font=\sffamily\fontsize{12}{12}\selectfont, thin, align=center, 
+    fill=orange!30},
+  level 6/.style = {basic, rectangle, font=\sffamily\fontsize{12}{12}\selectfont, thin, align=center, 
+    fill=cyan!20},
+   boxaround/.style={draw=violet, font=\sffamily\fontsize{12}{12}\selectfont, thick, dashdotted,
+     inner sep=0.8em},
+ >=latex
+}
+
+\usepackage{paralist}
+\usepackage{boxedminipage} %proof rules
+\usepackage{booktabs} %proof rules
+\usepackage{chngcntr}
+\counterwithout{figure}{section}
 
 \begin{document}
 

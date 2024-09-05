@@ -76,9 +76,7 @@
 \title{Towards Explainable Compositional Reasoning}
 
 \author{\IEEEauthorblockN{
-		Isaac Amundson, Amer Tahat, 
-%		Saqib Hasan, 
-		David Hardin, and Darren Cofer}
+		Isaac Amundson, Amer Tahat, David Hardin, and Darren Cofer}
 	\IEEEauthorblockA{Applied Research and Technology, Collins Aerospace, USA\\
 		{\{first.last\}@collins.com}}
 	}
@@ -89,15 +87,12 @@
 
 \begin{abstract}
 
-Formal verification tools such as model checkers have been around for decades, both as research tools and commercially-licensed software.  Unfortunately, despite their ability to prove that mission-critical properties are satisfied in design and implementation, the aerospace and defense industry is still not seeing widespread adoption of these powerful technologies. 
-%
-%However, formal methods usage is seeing considerable traction in the tech industry (e.g., Amazon, Meta, etc.).
-%The DARPA PROVERS program was launched to replicate that success for the defense-industrial base.
+Formal verification tools such as model checkers have been around for decades.  Unfortunately, despite their ability to prove that mission-critical properties are satisfied in both design and implementation, the aerospace and defense industry is still not seeing widespread adoption of these powerful technologies. 
 %
 In looking at the possible reasons for slow uptake, difficulty in understanding analysis results (i.e., counterexamples) tops the list of multiple surveys.
 %
 In previous work, our team developed AGREE, an assume-guarantee formal analysis tool for architecture models.  Like many other model checkers, AGREE generates potentially large counterexamples in a tabular format containing variable values at each time step of program execution up to the property violation, which can be difficult to interpret, especially for novice formal methods users.
-In this paper, we present our approach for achieving \textit{explainable} compositional reasoning using AGREE in combination with generative AI.  Our preliminary feasibility results indicate this technique works surprisingly well, and encouraged us to expand this approach to other areas in explainable proof engineering.  
+In this paper, we present our approach for achieving \textit{explainable} compositional reasoning using AGREE in combination with generative AI.  Our preliminary feasibility results indicate this technique works surprisingly well, and have encouraged us to expand this approach to other areas in explainable proof engineering.  
 	
 
 \end{abstract}
@@ -111,10 +106,6 @@ DISTRIBUTION STATEMENT A. Approved for public release: distribution unlimited.
 \section{Explainable AGREE}
 \label{sec:agree}
 \input{agree}
-
-%\section{Assurance Dashboard}
-%\label{sec:dashboard}
-%\input{dashboard}
 
 \section{Conclusion}
 \label{sec:conclusion}

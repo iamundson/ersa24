@@ -1,17 +1,17 @@
 % Summary
 
-In an effort to make AGREE results more explainable, we have developed AgreeDog, a generative AI-based tool that produces natural language explanations from (potentially complex) AGREE counterexamples. 
+In an effort to make AGREE results more explainable, we have developed a generative AI-based tool that produces natural language explanations from (potentially complex) AGREE counterexamples. 
 %
 % Future Work
 %
 %   Use AgreeDog to generate AGREE spec statements
-Although initial results are encouraging, we will continue to evaluate our approach on increasingly complex models and formal specifications.  In addition, we believe usability of other AGREE features can also benefit from generative AI.  The most obvious candidate is the formalization of AGREE contracts from natural language requirements.   
+Although initial results are encouraging, we will continue to evaluate our approach on increasingly complex models and formal specifications.  In addition, we believe usability of other AGREE features can also benefit from generative AI.  The most obvious candidates are the formalization of AGREE contracts from natural language requirements and the modification of models to conform to their contracts.   
 
 %   AgreeDog integration with OSATE
-Our AgreeDog prototype implementation is currently decoupled from AGREE and OSATE.  In order to truly address AGREE usability, tighter tool integration is required, and will be the focus of upcoming work as we continue to refine the tool.
-%
+Our prototype implementation is currently loosely coupled with AGREE and OSATE.  In order to truly address AGREE usability, tighter tool integration is required, and will be the focus of upcoming work as we continue to refine the tool.  We envision an integrated copilot that smartly parses the model abstract syntax tree, interacts with the user, and makes automated updates to the AGREE contracts and AADL model by using features provided by the IDE.
+
 %   Assurance Dashboard
-In addition, INSPECTA will include a DevOps Assurance Dashboard for displaying development status, analysis results and progress towards achieving assurance goals.  The AgreeDog explainable counterexamples will be accessible from the dashboard, and therefore a mechanism will need to be implemented to ensure formatting does not lead to obscuring the explanation in any significant manner.
+INSPECTA includes a DevOps Assurance Dashboard for displaying development status, analysis results and progress towards achieving assurance goals.  The explainable counterexamples will be accessible from the dashboard, and therefore a mechanism will need to be implemented to ensure formatting does not lead to obscuring the explanation in any significant manner.
 %   Metrics capture
 The dashboard will also capture and display tool usage metrics to help us better understand the degree to which a more explainable analysis result is helpful to the user in terms of leading to a requirement or design fix that then leads to a passing result. 
 %
